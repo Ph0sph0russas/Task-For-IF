@@ -117,21 +117,21 @@ namespace Task1.Tests
         }
 
         [TestMethod()]
-        public void convertNumberToMoneyStringTest1()
+        public void convertNumberToMoneyStringDefaultTest()
         {
             int enteredValue = 2020;
             string result = Logic.convertNumberToMoneyString(enteredValue);
             Assert.AreEqual("20 рублей 20 копеек", result);
         }
         [TestMethod()]
-        public void convertNumberToMoneyStringTest2()
+        public void convertNumberToMoneyStringExactRubTest()
         {
             int enteredValue = 2000;
             string result = Logic.convertNumberToMoneyString(enteredValue);
             Assert.AreEqual("20 рублей ровно", result);
         }
         [TestMethod()]
-        public void convertNumberToMoneyStringTest3()
+        public void convertNumberToMoneyStringOnlyPennyTest()
         {
             int enteredValue = 99;
             string result=Logic.convertNumberToMoneyString(enteredValue);
